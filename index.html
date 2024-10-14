@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Gabriel Izidoro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html, a {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            text-decoration: none;
+            color: #262121;
+        }
+
+        header {
+            background-color: #D9D9D9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            height: 70px;
+        }
+
+        header a {
+            margin-left: 20px;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom, #2b2323, 60%, #2c2424, #2e2626, #302828, #322a2a, #342c2c, #362e2e, #383030, #3a3232, #3c3434, #3e3636, #403838);
+            background-size: cover; 
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            color: #FFFFFF;
+            padding: 0 10%;
+            margin-top: 8%;
+            font-family: "Inknut Antiqua", serif;
+            font-size: 13px;
+            text-align: left;
+        }
+
+        .texto {
+            margin-bottom: 20px;
+            margin-right: 50%;
+        }
+
+        .assinatura {
+            font-family: "Inspiration", cursive;
+            font-size: 50px;
+            text-align: right;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-links a {
+            font-size: 40px;
+            color: #262121;
+            background-color: #D9D9D9;
+            padding: 5px 40px;
+            border-radius: 10px;
+            border: 2px solid #262121;
+            margin: 0 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-links a:hover {
+            background-color: #D9D9D9;
+            color: #262121;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.801);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .left {
+            border-right: 1px solid #D9D9D9;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .right a {
+            color: #D9D9D9;
+            border: 1px solid #D9D9D9;
+            padding: 2px 15px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .right a:hover{
+            background-color: #D9D9D9;
+            color: #262121;
+        }
+
+        .left p, .right p {
+            margin: 10px 0;
+        }
+        .left i{ 
+            font-size: 5px;
+        }
+        .linguagens {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .linguagens i{
+            font-size: 50px;
+            padding: 0 3%;
+            color: #D9D9D9;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            background: #262121;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #D9D9D9;
+        }
+
+        footer a {
+            color: #D9D9D9;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer i{
+            font-size: 1.5rem;
+        }
+        .acessibilidade{
+            background-color: #c9c9c9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            padding: 0px 10px;
+            
+        }
+        .acessibilidade select{
+            color: #262121;
+            padding: 0px 5px;
+            border-radius: 5px;
+            border: 0;
+        }
+        .acessibilidade .Esc-Idioma {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .projetos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 0 auto;
+            padding: 20px 0;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .projeto_1 {
+            background-color: #D9D9D9;
+            color: #262121;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            height: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: height 0.3s ease, transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .projeto_1 p {
+            opacity: 0;
+            transition: opacity 0.01s ease;
+            margin: 10px 0;
+        }
+
+        .projeto_1:hover {
+            height: 420px; 
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.801);
+            cursor: pointer;
+        }
+
+        .projeto_1:hover p {
+            opacity: 1;
+        }
+
+        .projeto_1 img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            cursor: zoom-in;
+            border: 2px solid #262121;
+            transition: transform 0.3s ease;
+        }
+        .projeto_1 a {
+            border: 2px solid #262121;
+            border-radius: 5px;
+            padding: 0 4%;
+        }
+        .projeto_1 a:hover {
+            color: #D9D9D9;
+            background-color: #262121;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.692);
+            transform: translateY(-2px);
+        }
+
+        .projeto_1:hover img {
+            transform: scale(1.05);
+        }
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #D9D9D9;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #FFFFFF;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="acessibilidade">
+        <p>Idioma do site <i class="fa-solid fa-language"></i> |</p>
+        <div class="Esc-Idioma">
+            <nav>
+                <select name="Idioma" id="idioma" onchange="CheckIdioma()">
+                    <option value="value 1">PT-BR</option>
+                    <option value="value 2">EN</option>
+                </select>
+            </nav>
+        </div>
+    </div>
+    <header>
+        <img src="Logo_GrupoGizi.png" alt="Logo do Grupo Gizi" width="70">
+        <nav>
+            <a href="#certificados">Certificados</a>
+            <a href="#meus_projetos">Projetos</a>
+        </nav>
+    </header>
+    <main>
+        <div class="texto">
+            <p id="Texto-1">Entusiasta de tecnologia com uma base sólida em redes, formada pela FIEB, e atualmente cursando Análise e Desenvolvimento de Sistemas (ADS) na Fatec Zona Sul. Busco criar soluções inovadoras que transformem ideias em resultados práticos e eficientes.</p>
+        </div>
+        <br>
+        <div class="assinatura">
+            Gabriel Izidoro
+        </div>
+        <br>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/gabriel-izidoro-031443330/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <br><br><br><br>
+        <div class="section">
+            <div class="left">
+                <h2 id="titulo_2">Experiencia com:</h2>
+                <p><i class="fa-solid fa-circle"></i> <span id="texto_right1">Desenvolvimento de sistemas;</span></p>
+                <p><i class="fa-solid fa-circle"></i> <span id="texto_right2">Manutenção de computadores;</span></p>
+                <p><i class="fa-solid fa-circle"></i> <span id="texto_right3">Administração de Redes;</span></p>
+                <p><i class="fa-solid fa-circle"></i> <span id="texto_right4">Office 365.</span></p>
+            </div>
+            <div class="right">
+                <h2 id="titulo_destaque">Projeto em destaque:</h2>
+                <p id="texto_destaque">Recomendo meu sistema de agendamento para coworking, que facilita a reserva de espaços de forma rápida e intuitiva, demonstrando minha habilidade em desenvolvimento web.</p>
+                <a href="https://gabrielizi.github.io/Projeto_Coworking/index.html" id="bnt_1" target="_blank">Conferir</a>
+            </div>
+        </div>
+        <br><br>
+        <div class="linguagens">
+            <i class="fa-brands fa-html5"></i>
+            <p>|</p>
+            <i class="fa-brands fa-css3-alt"></i>
+            <p>|</p>
+            <i class="fa-brands fa-js"></i>
+            <p>|</p>
+            <i class="fa-brands fa-python"></i>
+            <p>|</p>
+            <i class="fa-brands fa-php"></i>
+            <p>|</p>
+            <i class="fa-solid fa-database"></i>
+            <p>|</p>
+            <i class="fa-solid fa-network-wired"></i>
+            <p>|</p>
+            <i class="fa fa-wrench"></i>
+        </div>
+        <br><br><br>
+        <h2 id="certificados">Meus Certificados:</h2>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="Certificado_1.png" alt="Imagem 1">
+                <img src="Certificado_2.png" alt="Imagem 2">
+                <img src="Certificado_3.png" alt="Imagem 3">
+                <img src="Certificado_4.png" alt="Imagem 4">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>  
+        <br>      
+        <h2 id="meus_projetos">Meus Projetos:</h2>
+        <div class="projetos">
+            <div class="projeto_1">
+                <img src="logo_coworking.png" alt="">
+                <h3>Coworking+</h3>
+                <p id="descricao_projeto_1">Reserve seu espaço de coworking de forma rápida e fácil. Escolha entre salas de reunião, mesas individuais e áreas compartilhadas, tudo com total flexibilidade.</p>
+                <a href="https://gabrielizi.github.io/Projeto_Coworking/index.html" target="_blank" id="bnt_2">Conferir</a>
+            </div>
+            <div class="projeto_1">
+                <img src="logo_coworking.png" alt="">
+                <h3>Coworking+</h3>
+                <p id="descricao_projeto_2">Reserve seu espaço de coworking de forma rápida e fácil. Escolha entre salas de reunião, mesas individuais e áreas compartilhadas, tudo com total flexibilidade.</p>
+                <a href="https://gabrielizi.github.io/Projeto_Coworking/index.html" target="_blank" id="bnt_3">Conferir</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Grupo Gizi.</p>
+        <p id="credito1">Todos os direitos reservados.</p>
+        <p id="credito2">Siga-nos nas redes sociais: </p>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/GabrielIzi" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </footer>
+    <script>
+        function CheckIdioma() {
+        const texts = {
+            "value 1": {
+                text_1: "Entusiasta de tecnologia com uma base sólida em redes, formada pela FIEB, e atualmente cursando Análise e Desenvolvimento de Sistemas (ADS) na Fatec Zona Sul. Busco criar soluções inovadoras que transformem ideias em resultados práticos e eficientes.",
+                titulo_destaque: "Projeto em destaque:",
+                texto_destaque: "Recomendo meu sistema de agendamento para coworking, que facilita a reserva de espaços de forma rápida e intuitiva, demonstrando minha habilidade em desenvolvimento web.",
+                titulo_2: "Experiencia com:",
+                bnt_1: "Conferir",
+                bnt_2: "Conferir",
+                bnt_3: "Conferir",
+                credito1: "Todos os direitos reservados.",
+                credito2: "Siga-nos nas redes sociais:",
+                texto_right1: "Desenvolvimento de sistemas;",
+                texto_right2: "Manutenção de computadores;",
+                texto_right3: "Administração de Redes;",
+                texto_right4: "Office 365.",
+                descricao_projeto_1: "Reserve seu espaço de coworking de forma rápida e fácil. Escolha entre salas de reunião, mesas individuais e áreas compartilhadas, tudo com total flexibilidade.",
+                descricao_projeto_2: "Reserve seu espaço de coworking de forma rápida e fácil. Escolha entre salas de reunião, mesas individuais e áreas compartilhadas, tudo com total flexibilidade.",
+                meus_projetos: "Meus Projetos:",
+                certificados: "Meus Certificados:"
+            },
+            "value 2": {
+                text_1: "A technology enthusiast with a solid foundation in networking, graduated from FIEB, and currently pursuing Systems Analysis and Development (ADS) at Fatec Zona Sul. I strive to create innovative solutions that turn ideas into practical and effective outcomes.",
+                titulo_destaque: "Highlighted Project:",
+                texto_destaque: "I suggest my coworking reservation system, designed to make booking spaces quick and intuitive, showcasing my skills in web development.",
+                titulo_2: "Experience in:",
+                bnt_1: "Check",
+                bnt_2: "Check",
+                bnt_3: "Check",
+                credito1: "All rights reserved.",
+                credito2: "Follow us on social media:",
+                texto_right1: "Systems development;",
+                texto_right2: "Computer maintenance;",
+                texto_right3: "Network Administration;",
+                texto_right4: "Office 365.",
+                descricao_projeto_1: "Book your coworking space quickly and easily. Choose between meeting rooms, individual tables and shared areas, all with total flexibility.",
+                descricao_projeto_2: "Book your coworking space quickly and easily. Choose between meeting rooms, individual tables and shared areas, all with total flexibility.",
+                meus_projetos: "My Projects:",
+                certificados: "My Certificates:"
+            }
+        };
+
+        const idioma = document.getElementById('idioma').value;
+        const elements = {
+            text_1: document.getElementById('Texto-1'),
+            titulo_destaque: document.getElementById('titulo_destaque'),
+            texto_destaque: document.getElementById('texto_destaque'),
+            titulo_2: document.getElementById('titulo_2'),
+            bnt_1: document.getElementById('bnt_1'),
+            bnt_2: document.getElementById('bnt_2'),
+            bnt_3: document.getElementById('bnt_3'),
+            credito1: document.getElementById('credito1'),
+            credito2: document.getElementById('credito2'),
+            texto_right1: document.getElementById('texto_right1'),
+            texto_right2: document.getElementById('texto_right2'),
+            texto_right3: document.getElementById('texto_right3'),
+            texto_right4: document.getElementById('texto_right4'),
+            descricao_projeto_1: document.getElementById('descricao_projeto_1'),
+            descricao_projeto_2: document.getElementById('descricao_projeto_2'),
+            meus_projetos: document.getElementById('meus_projetos'),
+            certificados: document.getElementById('certificados')
+        };
+
+        const selectedTexts = texts[idioma] || texts["value 2"];
+
+        Object.keys(selectedTexts).forEach(key => {
+            if (elements[key]) {
+                elements[key].textContent = selectedTexts[key];
+            }
+        });
+    }
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-images img');
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = slides.length - 1; // Se for a primeira imagem, volta para a última
+        } else if (currentSlide >= slides.length) {
+            currentSlide = 0; // Se for a última imagem, volta para a primeira
+        }
+
+        document.querySelector('.carousel-images').style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    </script>
+</body>
+</html>

@@ -28,19 +28,30 @@
         }
 
         body {
-            background-image: linear-gradient(to bottom, #2b2323, 60%, #2c2424, #2e2626, #302828, #322a2a, #342c2c, #362e2e, #383030, #3a3232, #3c3434, #3e3636, #403838);
+            background: linear-gradient(to bottom, #2b2323, #2c2424, #2e2626, #302828, #322a2a, #342c2c, #362e2e, #383030, #3a3232, #3c3434, #3e3636, #403838);
             background-size: cover; 
             min-height: 100vh;
             margin: 0;
+            display: flex;
+            flex-direction: column;
         }
 
+
         main {
+            flex: 1;
             color: #FFFFFF;
-            padding: 0 10%;
             margin-top: 8%;
             font-family: "Inknut Antiqua", serif;
             font-size: 13px;
             text-align: left;
+        }
+
+        main .texto {
+            padding: 0 5%;
+        }
+
+        main .assinatura{
+            padding-right: 5%;
         }
 
         .texto {
@@ -140,7 +151,6 @@
         footer {
             text-align: center;
             padding: 20px 0;
-            margin-top: 50px;
             background: #262121;
         }
 
@@ -295,6 +305,18 @@
         html {
             scroll-behavior: smooth;
         }
+        #certificados1{
+            margin: 0; /* Remove qualquer margem */
+            background: #4e4545; /* Cor sólida para combinar com o resto do site */
+            padding: 20px;
+            color: #FFFFFF; /* Mantendo o texto em branco para contraste */
+        }
+        #projetos1 {
+            margin: 0; /* Remove qualquer margem */
+            background: #3f3737; /* Cor sólida para combinar com o resto do site */
+            padding: 20px;
+            color: #FFFFFF; /* Mantendo o texto em branco para contraste */
+        }
 
         @keyframes fadeIn {
             to {
@@ -356,8 +378,8 @@
         <div class="social-links">
             <a href="https://www.linkedin.com/in/gabriel-izidoro-031443330/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
+        <br>
 
-        <br><br><br><br>
         <div class="section">
             <div class="left">
                 <h2 id="titulo_2">Experiencia com:</h2>
@@ -390,28 +412,31 @@
             <p>|</p>
             <i class="fa fa-wrench"></i>
         </div>
-        <br><br><br>
-        <h2 id="certificados">Meus Certificados:</h2>
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="Certificado_1.png" alt="Imagem 1">
-                <img src="Certificado_2.png" alt="Imagem 2">
-                <img src="Certificado_3.png" alt="Imagem 3">
-                <img src="Certificado_4.png" alt="Imagem 4">
+        <br><br>
+        <section id="certificados1">
+            <h2 id="certificados">Meus Certificados:</h2>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="Certificado_1.png" alt="Imagem 1">
+                    <img src="Certificado_2.png" alt="Imagem 2">
+                    <img src="Certificado_3.png" alt="Imagem 3">
+                    <img src="Certificado_4.png" alt="Imagem 4">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
-        </div>  
-        <br>      
-        <h2 id="meus_projetos">Meus Projetos:</h2>
-        <div class="projetos">
-            <div class="projeto_1">
-                <img src="logo_coworking.png" alt="">
-                <h3>Coworking+</h3>
-                <p id="descricao_projeto_1">Reserve seu espaço de coworking de forma rápida e fácil. Escolha entre salas de reunião, mesas individuais e áreas compartilhadas, tudo com total flexibilidade.</p>
-                <a href="https://gabrielizi.github.io/Projeto_Coworking/index.html" target="_blank" id="bnt_2">Conferir</a>
+        </section>
+        <section id="projetos1">
+            <h2 id="meus_projetos">Meus Projetos:</h2>
+            <div class="projetos">
+                <div class="projeto_1">
+                    <img src="logo_coworking.png" alt="">
+                    <h3>Coworking+</h3>
+                    <p id="descricao_projeto_1">Reserve seu espaço de coworking de forma rápida e fácil. Escolha entre salas de reunião, mesas individuais e áreas compartilhadas, tudo com total flexibilidade.</p>
+                    <a href="https://gabrielizi.github.io/Projeto_Coworking/index.html" target="_blank" id="bnt_2">Conferir</a>
+                </div>
             </div>
-        </div>
+        </section>     
     </main>
     <footer>
         <p>&copy; 2024 Grupo Gizi.</p>

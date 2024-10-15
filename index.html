@@ -362,8 +362,8 @@
     <header>
         <img src="Logo_GrupoGizi.png" alt="Logo do Grupo Gizi" width="70">
         <nav>
-            <a href="#certificados">Certificados</a>
-            <a href="#meus_projetos">Projetos</a>
+            <a href="#certificados" id="texto_menu1">Certificados</a>
+            <a href="#meus_projetos" id="texto_menu2">Projetos</a>
         </nav>
     </header>
     <main>
@@ -468,7 +468,9 @@
                 descricao_projeto_1: "Reserve seu espaço de coworking de forma rápida e fácil. Escolha entre salas de reunião, mesas individuais e áreas compartilhadas, tudo com total flexibilidade.",
                 descricao_projeto_2: "Reserve seu espaço de coworking de forma rápida e fácil. Escolha entre salas de reunião, mesas individuais e áreas compartilhadas, tudo com total flexibilidade.",
                 meus_projetos: "Meus Projetos:",
-                certificados: "Meus Certificados:"
+                certificados: "Meus Certificados:",
+                texto_menu1: "Certificados",
+                texto_menu2: "Projetos"
             },
             "value 2": {
                 text_1: "A technology enthusiast with a solid foundation in networking, graduated from FIEB, and currently pursuing Systems Analysis and Development (ADS) at Fatec Zona Sul. I strive to create innovative solutions that turn ideas into practical and effective outcomes.",
@@ -487,7 +489,9 @@
                 descricao_projeto_1: "Book your coworking space quickly and easily. Choose between meeting rooms, individual tables and shared areas, all with total flexibility.",
                 descricao_projeto_2: "Book your coworking space quickly and easily. Choose between meeting rooms, individual tables and shared areas, all with total flexibility.",
                 meus_projetos: "My Projects:",
-                certificados: "My Certificates:"
+                certificados: "My Certificates:",
+                texto_menu1: "Certificates",
+                texto_menu2: "Projects"
             }
         };
 
@@ -509,7 +513,9 @@
             descricao_projeto_1: document.getElementById('descricao_projeto_1'),
             descricao_projeto_2: document.getElementById('descricao_projeto_2'),
             meus_projetos: document.getElementById('meus_projetos'),
-            certificados: document.getElementById('certificados')
+            certificados: document.getElementById('certificados'),
+            texto_menu1: document.getElementById('texto_menu1'),
+            texto_menu2: document.getElementById('texto_menu2')
         };
 
         const selectedTexts = texts[idioma] || texts["value 2"];
